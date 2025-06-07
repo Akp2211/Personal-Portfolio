@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alok Kumar Pandey | Portfolio</title>
+    <style>
+      :root {
+        --primary: #2563eb;
+        --dark: #1e293b;
+        --light: #f8fafc;
+        --accent: #0ea5e9;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        color: var(--dark);
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 0;
+      }
+
+      header {
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(10px);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 0;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .logo span {
+        color: var(--accent);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        font-style: initial;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: 600;
+        transition: all 0.3s;
+        position: relative;
+        padding: 0.5rem 0;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: var(--primary);
+        transition: width 0.3s;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      section {
+        padding: 6rem 0;
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        min-height: 90vh;
+        gap: 3rem;
+      }
+
+      .hero-content {
+        flex: 1;
+      }
+
+      .hero-image {
+        flex: 1;
+        text-align: center;
+        position: relative;
+      }
+
+      .profile-img {
+        width: 85%;
+        max-width: 400px;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+        border: 5px solid white;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .highlight {
+        color: var(--primary);
+        position: relative;
+        display: inline-block;
+      }
+
+      .highlight::after {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        height: 12px;
+        background: rgba(37, 99, 235, 0.2);
+        z-index: -1;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: #475569;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--primary);
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 2rem;
+        transition: all 0.3s;
+        box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        border: 2px solid transparent;
+      }
+
+      .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+        background-color: transparent;
+        color: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.8rem;
+        margin-bottom: 4rem;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 5px;
+        background-color: var(--primary);
+        border-radius: 5px;
+      }
+
+      .about-content {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .about-text {
+        flex: 1;
+        font-size: large;
+      }
+
+      .about-image {
+        flex: 1;
+        text-align: center;
+      }
+
+      .education {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        margin-top: 2rem;
+      }
+
+      .education h3 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      .contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .contact-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s;
+        text-align: center;
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-card a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        display: block;
+        margin-top: 1rem;
+        word-break: break-all;
+      }
+
+      footer {
+        text-align: center;
+        padding: 3rem 0;
+        background: white;
+        margin-top: 5rem;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .hero,
+        .about-content {
+          flex-direction: column;
+        }
+
+        h1 {
+          font-size: 3rem;
+        }
+
+        .nav-links {
+          gap: 1.5rem;
+        }
+      }
+
+      /* Skills Section Styles */
+      #skills {
+        background-color: #f8f9fa;
+        padding: 80px 0;
+      }
+
+      .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .skill-category {
+        background: white;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .skill-category:hover {
+        transform: translateY(-5px);
+      }
+
+      .skill-category h3 {
+        color: #2563eb;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eef2ff;
+      }
+
+      .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .skill-item {
+        background-color: #eef2ff;
+        color: #2563eb;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .skill-item:hover {
+        background-color: #2563eb;
+        color: white;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">Alok<span>Pandey</span></div>
+          <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Hi, I'm <span class="highlight">Alok Kumar Pandey</span></h1>
+          <h2>Computer Science Engineer</h2>
+          <p class="subtitle">
+            B.Tech Student at Sardar Vallabhbhai National Institute of
+            Technology, Surat
+          </p>
+          <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+        <div class="hero-image">
+          <div
+            class="profile-placeholder"
+            style="
+              width: 100%;
+              height: 400px;
+              background: linear-gradient(135deg, #93c5fd 0%, #dbeafe 100%);
+              border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            "
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a passionate Computer Science Engineering student at SVNIT
+              Surat with a strong interest in software development and problem
+              solving.
+            </p>
+            <p>
+              My academic journey focuses on mastering core CS concepts while
+              actively developing my skills through personal projects and
+              competitive programming.
+            </p>
+
+            <div class="education">
+              <h3>Education</h3>
+              <p><strong>B.Tech in Computer Science Engineering</strong></p>
+              <p>Sardar Vallabhbhai National Institute of Technology, Surat</p>
+              <p>
+                Currently pursuing my undergraduate degree with focus on
+                algorithms, data structures, and software engineering
+                principles.
+              </p>
+            </div>
+          </div>
+          <div class="about-image">
+            <div
+              style="
+                width: 100%;
+                height: 300px;
+                background: linear-gradient(45deg, #bfdbfe 0%, #dbeafe 100%);
+                border-radius: 20px;
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-container">
+          <!-- Programming Languages -->
+          <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <div class="skill-list">
+              <div class="skill-item">C</div>
+              <div class="skill-item">C++</div>
+              <div class="skill-item">Python</div>
+              <div class="skill-item">JavaScript</div>
+              <div class="skill-item">HTML/CSS</div>
+            </div>
+          </div>
+
+          <!-- Web Technologies -->
+          <div class="skill-category">
+            <h3>Web Technologies</h3>
+            <div class="skill-list">
+              <div class="skill-item">React.js</div>
+              <div class="skill-item">Node.js</div>
+              <div class="skill-item">Express.js</div>
+              <div class="skill-item">Tailwind CSS</div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-category">
+            <h3>Databases</h3>
+            <div class="skill-list">
+              <div class="skill-item">MySQL</div>
+              <div class="skill-item">MongoDB</div>
+              <div class="skill-item">Firebase</div>
+            </div>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div class="skill-category">
+            <h3>Tools & Platforms</h3>
+            <div class="skill-list">
+              <div class="skill-item">Git & GitHub</div>
+              <div class="skill-item">VS Code</div>
+              <div class="skill-item">Linux</div>
+              <div class="skill-item">Docker</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-links">
+          <div class="contact-card">
+            <h3>Email</h3>
+            <a href="mailto:palok2799@gmail.com">palok2799@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <h3>LinkedIn</h3>
+            <a
+              href="https://www.linkedin.com/in/alok-kumar-pandey-015379318"
+              target="_blank"
+              >linkedin.com/in/alok-kumar-pandey</a
+            >
+          </div>
+          <div class="contact-card">
+            <h3>GitHub</h3>
+            <a href="https://github.com/Akp2211" target="_blank"
+              >github.com/Akp2211</a
+            >
+          </div>
+          <div class="contact-card">
+            <h3>LeetCode</h3>
+            <a href="https://leetcode.com/u/Akp2211/" target="_blank"
+              >leetcode.com/u/Akp2211</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Alok Kumar Pandey | Computer Science Engineer</p>
+      </div>
+    </footer>
+  </body>
+</html>
