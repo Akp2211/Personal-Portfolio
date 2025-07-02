@@ -346,6 +346,171 @@
         color: white;
         transform: scale(1.05);
       }
+
+      /* Projects Section Styles */
+      #projects {
+        background: white;
+        padding: 80px 0;
+      }
+
+      .projects-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .project-card {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 1px solid #e2e8f0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+        border-color: var(--primary);
+      }
+
+      .project-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+      }
+
+      .project-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .project-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark);
+        margin: 0;
+      }
+
+      .project-type {
+        background: var(--primary);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .project-description {
+        color: #475569;
+        font-size: 1rem;
+        margin-bottom: 25px;
+        line-height: 1.6;
+      }
+
+      .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 25px;
+      }
+
+      .tech-tag {
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--primary);
+        padding: 6px 12px;
+        border-radius: 15px;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+
+      .project-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+      }
+
+      .github-link {
+        background: var(--dark);
+        color: white;
+        border: 2px solid var(--dark);
+      }
+
+      .github-link:hover {
+        background: transparent;
+        color: var(--dark);
+      }
+
+      .demo-link {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      .demo-link:hover {
+        background: var(--primary);
+        color: white;
+      }
+
+      .add-project-card {
+        border: 3px dashed #cbd5e1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 300px;
+        color: #64748b;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .add-project-card:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+        background: rgba(37, 99, 235, 0.02);
+      }
+
+      .add-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .projects-container {
+          grid-template-columns: 1fr;
+        }
+        
+        .project-links {
+          flex-direction: column;
+        }
+        
+        .project-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -357,6 +522,7 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
           </div>
         </nav>
@@ -475,8 +641,103 @@
               <div class="skill-item">Git & GitHub</div>
               <div class="skill-item">VS Code</div>
               <div class="skill-item">Linux</div>
-              <div class="skill-item">Docker</div>
+              <div class="skill-item">Wireshark</div>
+              <div class="skill-item">Matlab</div>
+              <div class="skill-item">Tenserflow</div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Projects Section ======= -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        
+        <div class="projects-container">
+          <!-- Sample Project 1 -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">E-Learning Website</h3>
+              <span class="project-type">Coding Adda</span>
+            </div>
+            <p class="project-description">Developed a fully responsive e-learning platform with 5+ coding courses.Designed intuitive user interfaces using React, HTML, CSS, and JavaScript, improving user engagement by 30%.Implemented robust user registration and login features with input validation to ensure data security
+             </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">React.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Akp2211/Frontend-Projects" class="project-link github-link" target="_blank">
+                🔗 GitHub
+              </a>
+              <a href="#" class="project-link demo-link" target="_blank">
+                🚀 Live Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- Sample Project 2 -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Cricket Scoring Website</h3>
+              <span class="project-type">MMNCT</span>
+            </div>
+            <p class="project-description">
+              Engineered a real-time cricket tournament website with live score updates for 20+ teams, leveraging Firebase Realtime
+Database. Developed reusable React and Next.js components, achieving 40% faster development cycle with Tailwind CSS for
+responsive UI. Integrated real-time scoring features enabling instant updates, enhancing user experience for 500+ viewers</p>
+            <div class="project-tech">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">HTML/CSS</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">Next.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Akp2211/mmnct2k24" class="project-link github-link" target="_blank">
+                🔗 GitHub
+              </a>
+              <a href="#" class="project-link demo-link" target="_blank">
+                🚀 Live Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- Sample Project 3 -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Personal Portfolio</h3>
+              <span class="project-type">Website</span>
+            </div>
+            <p class="project-description">
+              Designed and developed a personal portfolio website to showcase projects, skills, and certifications with a clean,
+responsive design. Implemented modular React components for project cards, skills section, and contact forms, improving maintainability
+and scalability. Deployed the website using GitHub Pages for professional online presence and branding</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Akp2211/Personal-Portfolio" class="project-link github-link" target="_blank">
+                🔗 GitHub
+              </a>
+              <a href="#" class="project-link demo-link" target="_blank">
+                🚀 Live Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- Add New Project Card -->
+          <div class="add-project-card" onclick="alert('Add your new project details here!')">
+            <div class="add-icon">+</div>
+            <h3>Add New Project</h3>
+            <p>Click to add your next amazing project</p>
           </div>
         </div>
       </div>
