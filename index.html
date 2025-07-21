@@ -4,168 +4,142 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Alok Kumar Pandey | Portfolio</title>
-    <style>
-    </style>
+    <title>Alok Pandey - Portfolio</title>
+    
   </head>
   <body>
-    <header>
-      <div class="container">
-        <nav>
-          <div class="logo">Alok<span>Pandey</span></div>
-          <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </nav>
+    <nav id="navbar">
+      <div class="nav-container">
+        <div class="logo">AP</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-    </header>
+    </nav>
 
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Hi, I'm <span class="highlight">Alok Kumar Pandey</span></h1>
-          <h2>Computer Science Engineer</h2>
-          <p class="subtitle">
-            B.Tech Student at Sardar Vallabhbhai National Institute of
-            Technology, Surat
-          </p>
-          <a href="#contact" class="btn">Get in Touch</a>
-        </div>
-        <div class="hero-image">
-          <div
-            class="profile-placeholder"
-            style="
-              width: 100%;
-              height: 400px;
-              background: linear-gradient(135deg, #93c5fd 0%, #dbeafe 100%);
-              border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            "
-          ></div>
+          <div class="hero-text">
+            <h1>Alok Kumar Pandey</h1>
+            <p>
+              Full Stack Developer & UI/UX Designer crafting digital experiences
+              that matter
+            </p>
+            <div class="cta-buttons">
+              <a
+                href="https://drive.google.com/file/d/1HAJlYt_D4n1HtTDMmBewQiAeXOTFWNfS/view?usp=drivesdk"
+                class="btn btn-primary"
+                >Resume</a
+              >
+              <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="floating-card">
+              <div style="font-size: 2rem">💻</div>
+              <h4>Frontend</h4>
+            </div>
+            <div class="floating-card">
+              <div style="font-size: 2rem">⚙</div>
+              <h4>Backend</h4>
+            </div>
+            <div class="floating-card">
+              <div style="font-size: 2rem">🎨</div>
+              <h4>Design</h4>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="about">
       <div class="container">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
+          <div class="about-image">AP</div>
           <div class="about-text">
             <p>
-              I'm a passionate Computer Science Engineering student at SVNIT
-              Surat with a strong interest in software development and problem
-              solving.
+              I'm an enthusiastic web developer with around a year of experience
+              building responsive and user-friendly websites. My journey started
+              with a strong curiosity about how websites work, which soon turned
+              into a passion for creating clean, functional web applications.
             </p>
             <p>
-              My academic journey focuses on mastering core CS concepts while
-              actively developing my skills through personal projects and
-              competitive programming.
+              Alongside web development, I have a keen interest in
+              problem-solving and Data Structures & Algorithms. I regularly
+              practice coding challenges to strengthen my logical thinking and
+              coding efficiency, which helps me write better and optimized code
+              in my projects.
             </p>
-
-            <div class="education">
-              <h3>Education</h3>
-              <p><strong>B.Tech in Computer Science Engineering</strong></p>
-              <p>Sardar Vallabhbhai National Institute of Technology, Surat</p>
-              <p>
-                Currently pursuing my undergraduate degree with focus on
-                algorithms, data structures, and software engineering
-                principles.
-              </p>
-            </div>
-          </div>
-          <div class="about-image">
-            <div
-              style="
-                width: 100%;
-                height: 300px;
-                background: linear-gradient(45deg, #bfdbfe 0%, #dbeafe 100%);
-                border-radius: 20px;
-              "
-            ></div>
+            <p>
+              When I'm not coding, I enjoy exploring new web design trends, and
+              working on personal projects to enhance my skills. I believe in
+              writing clean, understandable code and creating interfaces that
+              provide a great user experience.
+            </p>
+            <p>
+              Currently, I'm focused on improving my skills in modern web
+              technologies such as HTML, CSS, JavaScript, and React, while
+              continuously sharpening my DSA knowledge to grow as a well-rounded
+              developer in the industry.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ======= Skills Section ======= -->
-    <section id="skills">
+     <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
       <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
-
-        <div class="skills-container">
-          <!-- Programming Languages -->
-          <div class="skill-category">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+            <div class="skill-icon">📟</div>
             <h3>Programming Languages</h3>
-            <div class="skill-list">
-              <div class="skill-item">C</div>
-              <div class="skill-item">C++</div>
-              <div class="skill-item">Python</div>
-              <div class="skill-item">JavaScript</div>
-              <div class="skill-item">HTML/CSS</div>
-            </div>
+            <p>C/C++, Python, JavaScript</p>
           </div>
-
-          <!-- Web Technologies -->
-          <div class="skill-category">
-            <h3>Web Technologies</h3>
-            <div class="skill-list">
-              <div class="skill-item">React.js</div>
-              <div class="skill-item">Node.js</div>
-              <div class="skill-item">Express.js</div>
-              <div class="skill-item">Tailwind CSS</div>
-            </div>
+          <div class="skill-card">
+            <div class="skill-icon">🚀</div>
+            <h3>Frontend Development</h3>
+            <p>React, TypeScript, HTML5, CSS3, Tailwind CSS</p>
           </div>
-
-          <!-- Databases -->
-          <div class="skill-category">
-            <h3>Databases</h3>
-            <div class="skill-list">
-              <div class="skill-item">MySQL</div>
-              <div class="skill-item">MongoDB</div>
-              <div class="skill-item">Firebase</div>
-            </div>
+          <div class="skill-card">
+            <div class="skill-icon">⚡</div>
+            <h3>Backend Development</h3>
+            <p>Node.js, Python, , MongoDB, MySQL,Firebase</p>
           </div>
-
-          <!-- Tools & Platforms -->
-          <div class="skill-category">
+          <div class="skill-card">
+            <div class="skill-icon">☁</div>
             <h3>Tools & Platforms</h3>
-            <div class="skill-list">
-              <div class="skill-item">Git & GitHub</div>
-              <div class="skill-item">VS Code</div>
-              <div class="skill-item">Linux</div>
-              <div class="skill-item">Wireshark</div>
-              <div class="skill-item">Matlab</div>
-              <div class="skill-item">Tenserflow</div>
-            </div>
+            <p>Linux, Git & GitHub, Wireshark, Matlab, Tenserflow</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ======= Projects Section ======= -->
-    <section id="projects">
+    <section id="projects" class="projects">
       <div class="container">
-        <h2 class="section-title">My Projects</h2>
-        
-        <div class="projects-container">
-          <!-- Sample Project 1 -->
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
           <div class="project-card">
-            <div class="project-header">
-              <h3 class="project-title">E-Learning Website</h3>
-              <span class="project-type">Coding Adda</span>
-            </div>
-            <p class="project-description">Developed a fully responsive e-learning platform with 5+ coding courses.Designed intuitive user interfaces using React, HTML, CSS, and JavaScript, improving user engagement by 30%.Implemented robust user registration and login features with input validation to ensure data security
-             </p>
-            <div class="project-tech">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">React.js</span>
-            </div>
-            <div class="project-links">
+            <div class="project-image">💻</div>
+            <div class="project-info">
+              <h3 class="project-title">E-Learning Platform</h3>
+              <p>
+                Developed a fully responsive e-learning platform with 5+ coding courses.Designed intuitive user interfaces using React, HTML, CSS, and JavaScript, improving user engagement by 30%.Implemented robust user registration and login features with input validation to ensure data security.
+              </p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">React</span>
+                <span class="tag">MongoDB</span>
+                <div class="project-links">
               <a href="https://github.com/Akp2211/Frontend-Projects" class="project-link github-link" target="_blank">
                 🔗 GitHub
               </a>
@@ -173,52 +147,51 @@
                 🚀 Live Demo
               </a>
             </div>
-          </div>
-
-          <!-- Sample Project 2 -->
-          <div class="project-card">
-            <div class="project-header">
-              <h3 class="project-title">Cricket Scoring Website</h3>
-              <span class="project-type">MMNCT</span>
+              </div>
             </div>
-            <p class="project-description">
+          </div>
+          <div class="project-card">
+            <div class="project-image">🏏</div>
+
+            <div class="project-info">
+              <h3 class="project-title">Cricket Scoring Website</h3>
+              <p class="project-description">
               Engineered a real-time cricket tournament website with live score updates for 20+ teams, leveraging Firebase Realtime
 Database. Developed reusable React and Next.js components, achieving 40% faster development cycle with Tailwind CSS for
 responsive UI. Integrated real-time scoring features enabling instant updates, enhancing user experience for 500+ viewers</p>
-            <div class="project-tech">
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">HTML/CSS</span>
-              <span class="tech-tag">Firebase</span>
-              <span class="tech-tag">Tailwind CSS</span>
-              <span class="tech-tag">Next.js</span>
-            </div>
-            <div class="project-links">
+            
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Next.js</span>
+              </div>
+              <div class="project-links">
               <a href="https://github.com/Akp2211/mmnct2k24" class="project-link github-link" target="_blank">
                 🔗 GitHub
               </a>
-              <a href="#" class="project-link demo-link" target="_blank">
+              <a href="https://www.mmnct.in/" class="project-link demo-link" target="_blank">
                 🚀 Live Demo
               </a>
             </div>
-          </div>
-
-          <!-- Sample Project 3 -->
-          <div class="project-card">
-            <div class="project-header">
-              <h3 class="project-title">Personal Portfolio</h3>
-              <span class="project-type">Website</span>
             </div>
-            <p class="project-description">
+          </div>
+          <div class="project-card">
+            <div class="project-image">💼</div>
+            <div class="project-info">
+              <h3 class="project-title">Personal Portfolio</h3>
+              <p class="project-description">
               Designed and developed a personal portfolio website to showcase projects, skills, and certifications with a clean,
 responsive design. Implemented modular React components for project cards, skills section, and contact forms, improving maintainability
 and scalability. Deployed the website using GitHub Pages for professional online presence and branding</p>
-            <div class="project-tech">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">CSS3</span>
-              <span class="tech-tag">Bootstrap</span>
-            </div>
-            <div class="project-links">
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">Bootstrap</span>
+              </div>
+              <div class="project-links">
               <a href="https://github.com/Akp2211/Personal-Portfolio" class="project-link github-link" target="_blank">
                 🔗 GitHub
               </a>
@@ -226,45 +199,53 @@ and scalability. Deployed the website using GitHub Pages for professional online
                 🚀 Live Demo
               </a>
             </div>
-          </div>
-
-          <!-- Add New Project Card -->
-          <div class="add-project-card" onclick="alert('Add your new project details here!')">
-            <div class="add-icon">+</div>
-            <h3>Add New Project</h3>
-            <p>Click to add your next amazing project</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="contact">
       <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-links">
-          <div class="contact-card">
-            <h3>Email</h3>
-            <a href="mailto:palok2799@gmail.com">palok2799@gmail.com</a>
-          </div>
-          <div class="contact-card">
-            <h3>LinkedIn</h3>
-            <a
-              href="https://www.linkedin.com/in/alok-kumar-pandey-015379318"
-              target="_blank"
-              >linkedin.com/in/alok-kumar-pandey</a
-            >
-          </div>
-          <div class="contact-card">
-            <h3>GitHub</h3>
-            <a href="https://github.com/Akp2211" target="_blank"
-              >github.com/Akp2211</a
-            >
-          </div>
-          <div class="contact-card">
-            <h3>LeetCode</h3>
-            <a href="https://leetcode.com/u/Akp2211/" target="_blank"
-              >leetcode.com/u/Akp2211</a
-            >
+        <h2 class="section-title">Let's Work Together</h2>
+        <div class="contact-content">
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Subject" />
+            </div>
+            <div class="form-group">
+              <textarea rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <strong>Email</strong>
+                <p>palok2799@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div>
+                <strong>Phone</strong>
+                <p>+91-8409725536</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong>Location</strong>
+                <p>Surat,Gujrat</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -272,8 +253,151 @@ and scalability. Deployed the website using GitHub Pages for professional online
 
     <footer>
       <div class="container">
-        <p>&copy; 2025 Alok Kumar Pandey | Computer Science Engineer</p>
+        <div class="social-links">
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          />
+          <a
+            href="https://www.instagram.com/alok_pandey_22"
+            class="social-link"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/alok-kumar-pandey-015379318"
+            class="social-link"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/Akp2211"
+            class="social-link"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://leetcode.com/u/Akp2211/"
+            class="social-link"
+            target="_blank"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+              alt="LeetCode"
+              style="height: 24px"
+          /></a>
+        </div>
+        <p>&copy; 2025 Alok Pandey. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", () => {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 100) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Form submission
+      document
+        .querySelector(".contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Create a simple success message
+          const formData = new FormData(this);
+          const successMessage = document.createElement("div");
+          successMessage.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+                color: white;
+                padding: 2rem 3rem;
+                border-radius: 20px;
+                text-align: center;
+                z-index: 9999;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            `;
+          successMessage.innerHTML = `
+                <h3>Message Sent! ✨</h3>
+                <p>Thanks for reaching out. I'll get back to you soon!</p>
+            `;
+
+          document.body.appendChild(successMessage);
+
+          // Remove message after 3 seconds
+          setTimeout(() => {
+            successMessage.remove();
+          }, 3000);
+
+          // Reset form
+          this.reset();
+        });
+
+      // Add intersection observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe skill cards and project cards for scroll animations
+      document
+        .querySelectorAll(".skill-card, .project-card")
+        .forEach((card) => {
+          card.style.opacity = "0";
+          card.style.transform = "translateY(30px)";
+          card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          observer.observe(card);
+        });
+
+      // Add typing effect to the hero title
+      const heroTitle = document.querySelector(".hero-text h1");
+      const titleText = heroTitle.textContent;
+      heroTitle.textContent = "";
+
+      let i = 0;
+      const typeWriter = () => {
+        if (i < titleText.length) {
+          heroTitle.textContent += titleText.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100);
+        }
+      };
+
+      // Start typing effect after page load
+      setTimeout(typeWriter, 1000);
+    </script>
   </body>
 </html>
