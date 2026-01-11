@@ -40,12 +40,14 @@ The website is fully responsive and works smoothly on mobile, tablet, and deskto
 
 ## 📂 Project Structure
 
+```text
 Personal-Portfolio/
 │
-├── index.html # Main webpage
-├── style.css # Styling and layout
-├── script.js # JavaScript for interactivity
-└── README.md # Project documentation
+├── index.html        # Main webpage
+├── style.css         # Styling and layout
+├── script.js         # JavaScript for interactivity
+└── README.md         # Project documentation
+```
 
 ## 🧩 How To Use
 
